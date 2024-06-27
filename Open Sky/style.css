@@ -97,7 +97,6 @@ nav ul li{
 .main__button button{
 	font-size: 17px;
 	padding: 15px 30px;
-	margin-right: 20px;
 	border-radius: 20px;
 	color: white;
 }
@@ -112,6 +111,7 @@ nav ul li{
 	box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
 }
 .main__button .btn1{
+	margin-right: 20px;
 	border: 0px;
 	background-image: linear-gradient(180deg,#3d5ffd,#7f55ec);
 }
@@ -248,11 +248,14 @@ nav ul li{
 .explore__nav--left{
 	display: flex;
 	align-items: flex-start;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .explore__nav--left button{
 	padding: 10px 15px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 	border-radius: 20px;
 	color: gainsboro;
 	background-color: #161a42;
@@ -409,6 +412,7 @@ footer .bottom{
 	}
 	.main__button button{
 		font-size: 16px;
+		padding: 15px 24px;
 	}
 	.main__title{
 		font-size: 29px;
