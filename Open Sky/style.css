@@ -245,6 +245,10 @@ nav ul li{
 	background-color: #20255c;
 	margin-bottom: 20px;
 }
+.explore__nav--left{
+	display: flex;
+	align-items: flex-start;
+}
 
 .explore__nav--left button{
 	padding: 10px 15px;
@@ -403,14 +407,14 @@ footer .bottom{
 	.main{
 		grid-area: 2/2/3/14;
 	}
+	.main__button button{
+		font-size: 16px;
+	}
 	.main__title{
 		font-size: 29px;
 	}
 	.main__caption{
 		font-size: 16px;
-	}
-	.main__button .btn2{
-		margin-top: 20px;
 	}
 	.check__heading{
 		flex-direction: column;
