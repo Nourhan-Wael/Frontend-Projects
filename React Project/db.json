@@ -1,0 +1,27 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"username": "user1",
+			"password": "hashed_password1",
+			"role": "user"
+		},
+		{
+			"id": 2,
+			"username": "admin",
+			"password": "hashed_password2",
+			"role": "admin"
+		}
+	],
+	"tasks": [
+		{
+			"id": "1",
+			"userId": 1,
+			"name": "Task 1",
+			"description": "This is task 1",
+			"priority": "high",
+			"dueDate": "2024-12-31",
+			"status": "pending"
+		}
+	]
+}
