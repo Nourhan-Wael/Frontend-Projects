@@ -1,43 +1,26 @@
-import React, { useEffect, useState } from "react";
-import Header from "./components/Header";
+import React, { useState } from "react";
 import "./App.css";
-import AddList from "./components/AddList";
-import TodoList from "./components/TodoList";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import Registration from "./components/Registration";
+import Login from "./components/Login";
+import Navbar from "./components/Navbar";
+import TaskManagement from "./components/TaskManagement";
 
 export default function App() {
-	const intialState = JSON.parse(localStorage.getItem("todos")) || [];
-	const [input, setInput] = useState("");
-	const [todos, setTodos] = useState(intialState);
-	const [editTodo, setEditTodo] = useState(null);
-
-	useEffect(() => {
-		localStorage.setItem("todos", JSON.stringify(todos));
-	}, [todos]);
+	const [user, setUser] = useState(null);
 
 	return (
-		<div className="container">
-			<div className="app-wrapper">
-				<div>
-					<Header />
-				</div>
-				<div>
-					<AddList
-						input={input}
-						setInput={setInput}
-						todos={todos}
-						setTodos={setTodos}
-						editTodo={editTodo}
-						setEditTodo={setEditTodo}
-					/>
-				</div>
-				<div>
-					<TodoList
-						todos={todos}
-						setTodos={setTodos}
-						setEditTodo={setEditTodo}
-					/>
-				</div>
-			</div>
+		<div>
+			<BrowserRouter>
+				<Navbar user={user} setUser={setUser} />
+				<Routes>
+					<Route path="/" element={<Home />}></Route>
+					<Route path="/registration" element={<Registration />}></Route>
+					<Route path="/login" element={<Login setUser={setUser} />}></Route>
+					<Route path="/todopage" element={<TaskManagement />}></Route>
+				</Routes>
+			</BrowserRouter>
 		</div>
 	);
 }

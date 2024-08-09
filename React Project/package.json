@@ -11,11 +11,13 @@
   },
   "dependencies": {
     "axios": "^1.7.3",
+    "bootstrap": "^5.3.3",
     "formik": "^2.4.6",
     "jsonwebtoken": "^9.0.2",
     "project-react-": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-paginate": "^8.2.0",
     "react-router-dom": "^6.26.0",
     "uuid": "^10.0.0",
     "yup": "^1.4.0"
