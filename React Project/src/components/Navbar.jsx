@@ -54,9 +54,13 @@ export default function Navbar({ user, setUser }) {
 								</p>
 								<Link
 									to="/" 
+									replace
 									className="btn btn-sm btn-outline-secondary col-lg-6 col-md-2"
 									type="button"
-									onClick={() => setUser(null)} // Clear user data on logout
+									onClick={() => {
+										setUser(null)
+										localStorage.clear()
+									}} // Clear user data on logout
 								>
 									Logout
 								</Link>
